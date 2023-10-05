@@ -10,7 +10,7 @@ export default function FooterComponent() {
       <div className="flex  ">
         <a
           href="#"
-          className="mr-2 transform hover:transition duration-700 hover:scale-150"
+          className="mr-2 transform hover:transition duration-700 hover:scale-150 hover:fill-cyan-700"
         >
           <RiFacebookFill />
         </a>

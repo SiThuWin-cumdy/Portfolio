@@ -4,11 +4,11 @@ import HomeComponent from "@/components/Home";
 export default function Home() {
   return (
     <>
-      <section>
+      <section id="home">
         <HomeComponent />
       </section>
 
-      <section>
+      <section id="aboutme">
         <AboutMeComponent />
       </section>
     </>
