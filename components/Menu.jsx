@@ -7,7 +7,7 @@ export default function MenuComponent() {
     <>
       <div className=" sticky top-0 flex flex-col w-56 h-screen bg-white rounded-r-3xl overflow-hidden">
         <div className="flex items-center justify-center h-32 ">
-          <div className=" w-24 h-24 overflow-hidden rounded-full border-4 border-indigo-500">
+          <div className=" w-24 h-24 overflow-hidden rounded-full border-4 border-indigo-700">
             <img
               src="https://sergio-react.vercel.app/static/img/about-me.jpg"
               title=""
@@ -15,7 +15,7 @@ export default function MenuComponent() {
             />
           </div>
         </div>
-        <h3 className="text-2xl flex items-center justify-center uppercase text-indigo-500 pb-3 shadow-md">
+        <h3 className="text-2xl flex items-center justify-center uppercase text-indigo-700 pb-3 shadow-md">
           Si Thu Win
         </h3>
         <ul className="flex flex-col py-4">
@@ -23,8 +23,8 @@ export default function MenuComponent() {
             <Link
               to="home"
               smooth={true}
-              duration={500}
-              className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+              duration={800}
+              className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-home"></i>
@@ -37,7 +37,7 @@ export default function MenuComponent() {
               to="aboutme"
               smooth={true}
               duration={800}
-              className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+              className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-music"></i>
@@ -49,8 +49,8 @@ export default function MenuComponent() {
             <Link
               to="services"
               smooth={true}
-              duration={500}
-              className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+              duration={800}
+              className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-drink"></i>
@@ -62,8 +62,8 @@ export default function MenuComponent() {
             <Link
               to="blogs"
               smooth={true}
-              duration={500}
-              className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+              duration={800}
+              className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-shopping-bag"></i>
@@ -75,8 +75,8 @@ export default function MenuComponent() {
             <Link
               to="contactme"
               smooth={true}
-              duration={500}
-              className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+              duration={800}
+              className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-chat"></i>
