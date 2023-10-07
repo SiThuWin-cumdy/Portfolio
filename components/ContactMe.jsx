@@ -18,13 +18,14 @@ export default function ContactMeComponent() {
             Feel free to contact me.
           </p>
           <h4 className="font-bold text-lg flex items-center mt-3">
-            <FiMapPin /> &nbsp; Yangon , Myanmar
+            <FiMapPin className="text-indigo-500" /> &nbsp; Yangon , Myanmar
           </h4>
           <h4 className="font-bold text-lg flex items-center mt-3">
-            <FiMail /> &nbsp; sithuwin.cumdy@gmail.com
+            <FiMail className="text-indigo-500" /> &nbsp;
+            sithuwin.cumdy@gmail.com
           </h4>
           <h4 className="font-bold text-lg flex items-center mt-3">
-            <FaMobileAlt />
+            <FaMobileAlt className="text-indigo-500" />
             &nbsp; +959968662646
           </h4>
         </div>
