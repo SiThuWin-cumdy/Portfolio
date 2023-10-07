@@ -9,31 +9,41 @@ export default function FooterComponent() {
     <>
       <div className="flex  ">
         <a
-          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/si-thu-win-960656180/"
           className="mr-2 transform hover:transition duration-700 hover:scale-150 hover:fill-cyan-700"
         >
           <RiFacebookFill />
         </a>
         <a
-          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/si-thu-win-960656180/"
           className="mr-2 transform hover:transition duration-700 hover:scale-150"
         >
           <RiTwitterXFill />
         </a>
         <a
-          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/si-thu-win-960656180/"
           className="mr-2 transform hover:transition duration-700 hover:scale-150"
         >
           <RiInstagramFill />
         </a>
         <a
-          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/si-thu-win-960656180/"
           className="mr-2 transform hover:transition duration-700 hover:scale-150"
         >
           <SiLinkedin />
         </a>
         <a
-          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/SiThuWin-cumdy"
           className="mr-2 transform hover:transition duration-700 hover:scale-150"
         >
           <ImGithub />
