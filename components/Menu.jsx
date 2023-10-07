@@ -1,7 +1,11 @@
 "use client";
 import FooterComponent from "@/components/Footer";
 import { Link, animateScroll as scroll } from "react-scroll";
-
+import { FiHome } from "react-icons/fi";
+import { BsPersonVcard } from "react-icons/bs";
+import { AiOutlineLaptop } from "react-icons/ai";
+import { TfiLayoutMediaOverlay } from "react-icons/tfi";
+import { TbPhoneCall } from "react-icons/tb";
 export default function MenuComponent() {
   return (
     <>
@@ -26,8 +30,8 @@ export default function MenuComponent() {
               duration={800}
               className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
             >
-              <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
-                <i className="bx bx-home"></i>
+              <span className="inline-flex items-center justify-center h-12 w-12 text-lg  ">
+                <FiHome />
               </span>
               <span className="text-sm font-medium">HOME</span>
             </Link>
@@ -39,8 +43,8 @@ export default function MenuComponent() {
               duration={800}
               className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
             >
-              <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
-                <i className="bx bx-music"></i>
+              <span className="inline-flex items-center justify-center h-12 w-12 text-lg  ">
+                <BsPersonVcard />
               </span>
               <span className="text-sm font-medium">ABOUT ME</span>
             </Link>
@@ -52,8 +56,8 @@ export default function MenuComponent() {
               duration={800}
               className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
             >
-              <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
-                <i className="bx bx-drink"></i>
+              <span className="inline-flex items-center justify-center h-12 w-12 text-lg ">
+                <AiOutlineLaptop />
               </span>
               <span className="text-sm font-medium">SERVICES</span>
             </Link>
@@ -65,8 +69,8 @@ export default function MenuComponent() {
               duration={800}
               className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
             >
-              <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
-                <i className="bx bx-shopping-bag"></i>
+              <span className="inline-flex items-center justify-center h-12 w-12 text-lg ">
+                <TfiLayoutMediaOverlay />
               </span>
               <span className="text-sm font-medium">BLOGS</span>
             </Link>
@@ -78,8 +82,8 @@ export default function MenuComponent() {
               duration={800}
               className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
             >
-              <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
-                <i className="bx bx-chat"></i>
+              <span className="inline-flex items-center justify-center h-12 w-12 text-lg ">
+                <TbPhoneCall />
               </span>
               <span className="text-sm font-medium">CONTACT ME </span>
             </Link>
