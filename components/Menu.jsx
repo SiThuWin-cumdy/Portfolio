@@ -9,7 +9,7 @@ import { TbPhoneCall } from "react-icons/tb";
 export default function MenuComponent() {
   return (
     <>
-      <div className=" sticky top-0 flex flex-col w-56 h-screen bg-white rounded-r-3xl overflow-hidden">
+      <div className="sticky top-0 flex-col w-56 h-screen bg-white rounded-r-3xl overflow-hidden  hidden lg:flex">
         <div className="flex items-center justify-center h-32 ">
           <div className=" w-24 h-24 overflow-hidden rounded-full border-4 border-indigo-700">
             <img

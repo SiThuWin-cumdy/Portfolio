@@ -26,8 +26,8 @@ export default function EducationComponent() {
     <>
       <ul className="bg-black outline-none list-none ">
         {educationList.map((t) => (
-          <span>
-            <li key={t.id} className="p-8">
+          <span key={t.id}>
+            <li className="p-8">
               <span className="px-2 py-1 -ml-10 text-sm tracking-wider bg-indigo-500 font-light shadow-md shadow-indigo-700">
                 {t.startDate} - {t.enddate}
               </span>

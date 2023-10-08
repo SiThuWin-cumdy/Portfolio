@@ -65,8 +65,8 @@ export default function ExperienceComponent() {
 
       <ul className="bg-black outline-none list-none ">
         {experienceList.map((t) => (
-          <span>
-            <li key={t.id} className="p-8 grid grid-cols-5 gap-5">
+          <span key={t.id}>
+            <li className="p-8 grid grid-cols-5 gap-5">
               <div className=" "></div>
               <div className="col-span-4 relative pl-4">
                 <h6 className="font-bold text-lg">{t.designation}</h6>
