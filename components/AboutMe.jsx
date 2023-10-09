@@ -3,6 +3,7 @@ import EducationComponent from "@/components/Education";
 import ExperienceComponent from "@/components/Experience";
 import StarRatingComponent from "@/components/StarRating";
 import React, { useEffect, useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const skills = [
   {
@@ -100,9 +101,11 @@ export default function AboutMeComponent() {
               the world. I like to work with new people. New people new
               Experiences.
             </p>
-            <button className="mt-3 transform rounded-md bg-indigo-500   p-3 hover:bg-violet-600 transition duration-500 hover:scale-90">
-              Contact Me
-            </button>
+            <Link to="contactme" smooth={true} duration={800}>
+              <button className="mt-3 transform rounded-md bg-indigo-500   p-3 hover:bg-violet-600 transition duration-500 hover:scale-90">
+                Contact Me
+              </button>
+            </Link>
           </div>
         </div>
 

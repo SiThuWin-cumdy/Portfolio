@@ -23,9 +23,16 @@ export default function HomeComponent() {
             specializing in creating stylish, modern websites, web services and
             online stores.
           </p>
-          <button className="mt-3 transform rounded-md bg-indigo-500   p-3 hover:bg-violet-600 transition duration-500 hover:scale-90">
-            Download CV
-          </button>
+
+          <a
+            href="files/AngularDeveloper_SiThuWin.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="mt-3 transform rounded-md bg-indigo-500   p-3 hover:bg-violet-600 transition duration-500 hover:scale-90">
+              Download CV
+            </button>
+          </a>
         </div>
         <div>
           <img
