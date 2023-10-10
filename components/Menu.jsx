@@ -10,14 +10,10 @@ export default function MenuComponent() {
   return (
     <>
       <div className="flex-col h-screen bg-white rounded-r-3xl overflow-hidden  w-56	fixed left-0 top-0">
-        <div className="h-full flex flex-col overflow-y-auto">
+        <div className="h-full flex flex-col overflow-y-auto overflow-x-hidden">
           <div className="flex items-center justify-center h-32 ">
             <div className=" w-24 h-24 overflow-hidden rounded-full border-4 border-indigo-700">
-              <img
-                src="https://sergio-react.vercel.app/static/img/about-me.jpg"
-                title=""
-                alt=""
-              />
+              <img src="images/logos/coding.png" title="" alt="" />
             </div>
           </div>
           <h3 className="text-2xl flex items-center justify-center uppercase text-indigo-700 pb-3 shadow-md">

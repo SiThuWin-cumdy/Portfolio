@@ -20,8 +20,7 @@ export default function HomeComponent() {
 
           <p className=" text-justify py-5 max-w-md	">
             I design and develop services for customers of all sizes,
-            specializing in creating stylish, modern websites, web services and
-            online stores.
+            specializing in creating stylish, modern websites and web services
           </p>
 
           <a
@@ -34,9 +33,10 @@ export default function HomeComponent() {
             </button>
           </a>
         </div>
-        <div>
+        <div className="py-20">
           <img
-            src="https://sergio-react.vercel.app/static/img/home-banner.png"
+            className="rounded-xl"
+            src="images/logos/home-profile.jpg"
             title=""
             alt=""
           />

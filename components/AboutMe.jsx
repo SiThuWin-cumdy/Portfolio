@@ -82,12 +82,13 @@ export default function AboutMeComponent() {
         <div className="container mx-auto grid grid-cols-2 gap-2 px-28 pt-32 text-white">
           <div>
             <img
-              src="https://sergio-react.vercel.app/static/img/about-me.png"
+              className="rounded-xl"
+              src="images/logos/about-me.jpg"
               title=""
               alt=""
             />
           </div>
-          <div className="py-20 px-10">
+          <div className=" px-10">
             <h3 className="font-light text-3xl  py-3 tracking-widest">
               ABOUT ME.
             </h3>
