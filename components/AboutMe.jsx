@@ -78,7 +78,7 @@ export default function AboutMeComponent() {
   }, []);
   return (
     <>
-      <div className="container mx-auto grid grid-cols-1 px-10 text-white lg:grid-cols-2 lg:gap-8 lg:pt-32 lg:px-28">
+      <div className=" mx-auto grid grid-cols-1 px-10 text-white lg:grid-cols-2 lg:gap-8 lg:pt-32 lg:px-28">
         <div>
           <img
             className="rounded-xl"
@@ -109,7 +109,7 @@ export default function AboutMeComponent() {
         </div>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 px-10 text-white lg:grid-cols-3 lg:gap-8 lg:pt-32 lg:px-28">
+      <div className=" mx-auto grid grid-cols-1 px-10 text-white lg:grid-cols-3 lg:gap-8 lg:pt-32 lg:px-28">
         <hr className="opacity-20 mb-10 col-span-3" />
         <h3 className="font-light tracking-widest text-3xl mb-10 col-span-3">
           EDUCATION & SKILLS

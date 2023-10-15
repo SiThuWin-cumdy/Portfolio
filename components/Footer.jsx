@@ -4,15 +4,15 @@ import { RiInstagramFill } from "react-icons/ri";
 import { SiLinkedin } from "react-icons/si";
 import { ImGithub } from "react-icons/im";
 
-export default function FooterComponent() {
+export default function FooterComponent({ isOpen }) {
   return (
     <>
-      <div className="flex  ">
+      <div className={`flex ${!isOpen ? "flex-col" : ""}`}>
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/si-thu-win-960656180/"
-          className="mr-2 transform hover:transition duration-700 hover:scale-150 hover:fill-cyan-700"
+          className="mr-2 mb-2 transform hover:transition duration-700 hover:scale-150 hover:fill-cyan-700"
         >
           <RiFacebookFill />
         </a>
@@ -20,7 +20,7 @@ export default function FooterComponent() {
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/si-thu-win-960656180/"
-          className="mr-2 transform hover:transition duration-700 hover:scale-150"
+          className="mr-2 mb-2 transform hover:transition duration-700 hover:scale-150"
         >
           <RiTwitterXFill />
         </a>
@@ -28,7 +28,7 @@ export default function FooterComponent() {
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/si-thu-win-960656180/"
-          className="mr-2 transform hover:transition duration-700 hover:scale-150"
+          className="mr-2 mb-2 transform hover:transition duration-700 hover:scale-150"
         >
           <RiInstagramFill />
         </a>
@@ -36,7 +36,7 @@ export default function FooterComponent() {
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/si-thu-win-960656180/"
-          className="mr-2 transform hover:transition duration-700 hover:scale-150"
+          className="mr-2 mb-2 transform hover:transition duration-700 hover:scale-150"
         >
           <SiLinkedin />
         </a>
@@ -44,7 +44,7 @@ export default function FooterComponent() {
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/SiThuWin-cumdy"
-          className="mr-2 transform hover:transition duration-700 hover:scale-150"
+          className="mr-2 mb-2 transform hover:transition duration-700 hover:scale-150"
         >
           <ImGithub />
         </a>

@@ -16,9 +16,7 @@ export default function RootLayout({ children }) {
         <>
           <div className="min-h-screen flex flex-row bg-gray-100">
             <MenuComponent />
-            <div className="bg-slate-900  absolute top-0 left-56 w-[calc(100%-14rem)] ">
-              {children}
-            </div>
+            <div className="bg-slate-900 w-full">{children}</div>
           </div>
         </>
       </body>

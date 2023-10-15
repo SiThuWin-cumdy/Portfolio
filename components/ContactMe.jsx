@@ -3,12 +3,12 @@ import { FaMobileAlt } from "react-icons/fa";
 export default function ContactMeComponent() {
   return (
     <>
-      <div className="container mx-auto mb-5 grid grid-cols-3 gap-3 px-28 pt-32 text-white">
-        <h3 className="font-light tracking-widest text-3xl col-span-3 mb-3">
+      <div className=" mx-auto mb-5 grid grid-cols-1 px-10 text-white lg:grid-cols-3 lg:gap-8 lg:pt-32 lg:px-28">
+        <h3 className="font-light tracking-widest text-3xl  mb-3  col-span-3">
           GET IN TOUCH.
         </h3>
 
-        <div className="bg-black p-10">
+        <div className="bg-black p-10 col-span-3 mb-1 lg:col-span-1">
           <h3 className="font-bold text-2xl">
             What’s your story?
             <br /> Get in touch
@@ -30,11 +30,11 @@ export default function ContactMeComponent() {
           </h4>
         </div>
 
-        <div className="bg-black p-10 col-span-2">
+        <div className="bg-black p-10 col-span-3 lg:col-span-2">
           <h3 className="font-bold text-2xl">Say Something</h3>
           <div className="grid grid-cols-2 gap-2 mt-4">
             <input
-              className="bg-transparent font-light p-3 border border-slate-500 rounded-md"
+              className="bg-transparent font-light p-3 border border-slate-500 rounded-md focus-visible:te"
               type="text"
               placeholder="Name *"
             />

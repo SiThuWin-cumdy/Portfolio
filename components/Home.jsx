@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 export default function HomeComponent() {
   return (
     <>
-      <div className="container mx-auto grid grid-cols-1 px-10  text-white lg:grid-cols-2 lg:pt-32 lg:px-24">
+      <div className=" mx-auto grid grid-cols-1 px-10  text-white lg:grid-cols-2 lg:pt-32 lg:px-24">
         <div className="py-20">
           <h3 className="text-2xl  py-3">Hello, I am</h3>
           <h1 className="text-5xl   font-bold py-3">Si Thu Win</h1>

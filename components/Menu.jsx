@@ -6,13 +6,32 @@ import { BsPersonVcard } from "react-icons/bs";
 import { AiOutlineLaptop } from "react-icons/ai";
 import { TfiLayoutMediaOverlay } from "react-icons/tfi";
 import { TbPhoneCall } from "react-icons/tb";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { useState } from "react";
 export default function MenuComponent() {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
-      <div className="flex-col h-screen bg-white rounded-r-3xl overflow-hidden  w-56	fixed left-0 top-0">
+      <div
+        className={`sticky top-0 flex flex-col h-screen bg-white rounded-sm overflow-hidden transition-all duration-500 ease-linear ${
+          isOpen ? "w-56" : "w-12"
+        }`}
+      >
         <div className="h-full flex flex-col overflow-y-auto overflow-x-hidden">
           <div className="flex items-center justify-center h-32 ">
-            <div className=" w-24 h-24 overflow-hidden rounded-full border-4 border-indigo-700">
+            <RxHamburgerMenu
+              className="absolute top-0 right-0 cursor-pointer"
+              onClick={handleClick}
+            />
+            <div
+              className={`w-24 h-24 overflow-hidden rounded-full border-4 border-indigo-700 ${
+                !isOpen ? "w-11 h-11" : ""
+              }`}
+            >
               <img src="images/logos/coding.png" title="" alt="" />
             </div>
           </div>
@@ -30,7 +49,11 @@ export default function MenuComponent() {
                 <span className="inline-flex items-center justify-center h-12 w-12 text-lg  ">
                   <FiHome />
                 </span>
-                <span className="text-sm font-medium">HOME</span>
+                <span
+                  className={`text-sm font-medium ${!isOpen ? "hidden" : ""}`}
+                >
+                  HOME
+                </span>
               </Link>
             </li>
             <li>
@@ -43,7 +66,11 @@ export default function MenuComponent() {
                 <span className="inline-flex items-center justify-center h-12 w-12 text-lg  ">
                   <BsPersonVcard />
                 </span>
-                <span className="text-sm font-medium">ABOUT ME</span>
+                <span
+                  className={`text-sm font-medium ${!isOpen ? "hidden" : ""}`}
+                >
+                  ABOUT ME
+                </span>
               </Link>
             </li>
             <li>
@@ -56,7 +83,11 @@ export default function MenuComponent() {
                 <span className="inline-flex items-center justify-center h-12 w-12 text-lg ">
                   <AiOutlineLaptop />
                 </span>
-                <span className="text-sm font-medium">SERVICES</span>
+                <span
+                  className={`text-sm font-medium ${!isOpen ? "hidden" : ""}`}
+                >
+                  SERVICES
+                </span>
               </Link>
             </li>
             <li>
@@ -69,7 +100,11 @@ export default function MenuComponent() {
                 <span className="inline-flex items-center justify-center h-12 w-12 text-lg ">
                   <TfiLayoutMediaOverlay />
                 </span>
-                <span className="text-sm font-medium">BLOGS</span>
+                <span
+                  className={`text-sm font-medium ${!isOpen ? "hidden" : ""}`}
+                >
+                  BLOGS
+                </span>
               </Link>
             </li>
             <li>
@@ -82,13 +117,17 @@ export default function MenuComponent() {
                 <span className="inline-flex items-center justify-center h-12 w-12 text-lg ">
                   <TbPhoneCall />
                 </span>
-                <span className="text-sm font-medium">CONTACT ME </span>
+                <span
+                  className={`text-sm font-medium ${!isOpen ? "hidden" : ""}`}
+                >
+                  CONTACT ME
+                </span>
               </Link>
             </li>
           </ul>
 
           <div className="flex items-end flex-grow w-full justify-center py-3">
-            <FooterComponent />
+            <FooterComponent isOpen={isOpen} />
           </div>
         </div>
       </div>

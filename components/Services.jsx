@@ -30,7 +30,7 @@ const services = [
 export default function ServicesComponent() {
   return (
     <>
-      <div className="container mx-auto  mb-5 grid  grid-cols-1 gap-4 px-28 pt-32 text-white  lg:grid-cols-2 ">
+      <div className=" mx-auto  mb-5 grid  grid-cols-1 gap-4 px-10 text-white  lg:grid-cols-2 lg:pt-32 lg:px-28">
         <h3 className="font-light tracking-widest text-3xl mb-10  lg:col-span-2">
           WHAT I DO?
         </h3>
