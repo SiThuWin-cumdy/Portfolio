@@ -17,7 +17,7 @@ export default function MenuComponent() {
   return (
     <>
       <div
-        className={`sticky top-0 flex flex-col h-screen bg-white rounded-sm overflow-hidden transition-all duration-500 ease-linear ${
+        className={`sticky top-0 flex flex-col h-screen bg-white rounded-sm overflow-hidden transition-all duration-300 ease-linear ${
           isOpen ? "w-56" : "w-12"
         }`}
       >
@@ -28,14 +28,18 @@ export default function MenuComponent() {
               onClick={handleClick}
             />
             <div
-              className={`w-24 h-24 overflow-hidden rounded-full border-4 border-indigo-700 ${
-                !isOpen ? "w-11 h-11" : ""
-              }`}
+              className={`${
+                !isOpen ? "w-11 h-11" : "w-24 h-24"
+              } overflow-hidden rounded-full border-4 border-indigo-700 `}
             >
               <img src="images/logos/coding.png" title="" alt="" />
             </div>
           </div>
-          <h3 className="text-2xl flex items-center justify-center uppercase text-indigo-700 pb-3 shadow-md">
+          <h3
+            className={`${
+              !isOpen ? "text-lg" : "text-2xl"
+            } text-center uppercase text-indigo-700 pb-3 shadow-md`}
+          >
             Si Thu Win
           </h3>
           <ul className="flex flex-col py-4">
