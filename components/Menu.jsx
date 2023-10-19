@@ -17,7 +17,7 @@ export default function MenuComponent() {
   return (
     <>
       <div
-        className={`sticky top-0 flex flex-col h-screen bg-white rounded-sm overflow-hidden transition-all duration-300 ease-linear ${
+        className={`sticky top-0 h-screen bg-white rounded-sm overflow-hidden transition-all duration-300 ease-linear ${
           isOpen ? "w-56" : "w-12"
         }`}
       >
