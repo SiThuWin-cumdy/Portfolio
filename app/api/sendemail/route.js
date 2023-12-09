@@ -10,7 +10,9 @@ export async function POST(request) {
     await sendEmail({ subject, html });
     return NextResponse.json(
       {
-        data: "successfully send",
+        data: "",
+        success: true,
+        message: "Successfully Send Email",
       },
       { message: "Success" },
       { status: 200 }

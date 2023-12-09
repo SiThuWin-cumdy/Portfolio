@@ -2,7 +2,13 @@
 import { FiMail, FiMapPin } from "react-icons/fi";
 import { FaMobileAlt } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import React, { useEffect, useState } from "react";
+
 export default function ContactMeComponent() {
+  const [loading, setLoading] = useState(false);
+
   const {
     register,
     formState: { errors },
@@ -12,8 +18,13 @@ export default function ContactMeComponent() {
   // function to output form data
   // we need to pass it to onSubmit of form element
   const onSubmit = async (formData, e) => {
+    setLoading(true);
     e.preventDefault();
     const res = await sendMail(formData);
+    if (res.success) {
+      notify(res.message);
+    }
+    setLoading(false);
     e.target.reset();
   };
 
@@ -35,6 +46,8 @@ export default function ContactMeComponent() {
       console.log("Error sending email", error);
     }
   };
+
+  const notify = (message) => toast.success(message);
 
   return (
     <>
@@ -131,15 +144,45 @@ export default function ContactMeComponent() {
                 )}
               </div>
             </div>
-            <button
-              type="submit"
-              className="mt-3 transform rounded-md bg-indigo-500   p-3 hover:bg-violet-600 transition duration-500 hover:scale-90"
-            >
-              Send Message
-            </button>
+
+            {loading ? (
+              <button
+                type="button"
+                className="w-36	h-12 mt-3 transform rounded-md bg-indigo-500   p-3 hover:bg-violet-600 transition duration-500 hover:scale-90"
+              >
+                <svg
+                  className="w-5 h-5 text-white animate-spin absolute left-1/2 top-1/2 -mt-2.5 -ml-2.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="  mt-3 transform rounded-md bg-indigo-500   p-3 hover:bg-violet-600 transition duration-500 hover:scale-90"
+              >
+                Send Message
+              </button>
+            )}
           </form>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 }
