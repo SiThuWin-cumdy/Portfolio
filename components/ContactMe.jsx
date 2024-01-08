@@ -56,7 +56,7 @@ export default function ContactMeComponent() {
           GET IN TOUCH.
         </h3>
 
-        <div className="bg-black p-10 col-span-3 mb-1 lg:col-span-1">
+        <div className="bg-black p-8 col-span-3 mb-1 lg:col-span-1">
           <h3 className="font-bold text-2xl">
             What’s your story?
             <br /> Get in touch
@@ -66,7 +66,7 @@ export default function ContactMeComponent() {
             Feel free to contact me.
           </p>
           <h4 className="font-bold text-lg flex items-center mt-3">
-            <FiMapPin className="text-indigo-500" /> &nbsp; Yangon , Myanmar
+            <FiMapPin className="text-indigo-500" /> &nbsp; Dubai , UAE
           </h4>
           <h4 className="font-bold text-lg flex items-center mt-3">
             <FiMail className="text-indigo-500" /> &nbsp;
@@ -74,7 +74,7 @@ export default function ContactMeComponent() {
           </h4>
           <h4 className="font-bold text-lg flex items-center mt-3">
             <FaMobileAlt className="text-indigo-500" />
-            &nbsp; +959968662646
+            &nbsp; +971567019832
           </h4>
         </div>
 

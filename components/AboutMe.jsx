@@ -97,9 +97,9 @@ export default function AboutMeComponent() {
 
           <p className="text-slate-400	 text-justify py-5 ">
             I'm a Software Developer with over 5 years of experience. I'm from
-            Myanmar. I code and create web elements for amazing people around
-            the world. I like to work with new people. New people new
-            Experiences.
+            Myanmar,currently living in UAE. I code and create web elements for
+            amazing people around the world. I like to work with new people. New
+            people new Experiences.
           </p>
           <Link to="contactme" smooth={true} duration={800}>
             <button className="mt-3 transform rounded-md bg-indigo-500   p-3 hover:bg-violet-600 transition duration-500 hover:scale-90">
