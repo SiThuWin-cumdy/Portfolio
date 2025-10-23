@@ -12,18 +12,18 @@ const smtpOptions = {
   port: 465,
   secure: true,
   auth: {
-    user: "sithuwinbtr786@gmail.com",
-    pass: "eskw mdrz zsvq mtkf",
+    user: process.env.AUTH_EMAIL,
+    pass: process.env.AUTH_PASS,
   },
 };
 
-export const sendEmail = async (data: EmailPayload) => {
+export const sendEmail = async (data: EmailPayload) => { 
   const transporter = nodemailer.createTransport({
     ...smtpOptions,
   });
 
   return await transporter.sendMail({
-    to: "sithuwin.cumdy@gmail.com",
+    to: process.env.TO_EMAIL,
     ...data,
   });
 };
