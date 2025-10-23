@@ -1,20 +1,8 @@
-const educationList = [
-  {
-    id: "1",
-    course: "Bachelor in Computer Science",
-    schoolName: "Computer University Mandalay (CUMDY) ",
-    startDate: "2013",
-    endDate: "2018",
-  },
-  {
-    id: "2",
-    course: "Computer Basic",
-    schoolName: "KMD",
-    startDate: "2013",
-    endDate: "2013",
-  },
-];
+import portfolio from "@/public/data/portfolio";
+
 export default function EducationComponent() {
+  const { educationList } = portfolio;
+
   return (
     <>
       <ul className="bg-black outline-none list-none ">

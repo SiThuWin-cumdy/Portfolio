@@ -1,37 +1,11 @@
-import Link from "next/link";
+import Link from "next/link"; 
+import portfolio from '@/public/data/portfolio'; 
 
-const blogs = [
-  {
-    id: "1",
-    date: "29/FEB/2022 - WEBSITE - 1 COMMENT",
-    topic:
-      "Five Solid Evidences Attending Design Is Good For Your Career Development.",
-    image: "https://sergio-react.vercel.app/static/img/blog-1.jpg",
-  },
-  {
-    id: "2",
-    date: "29/FEB/2022 - WEBSITE - 1 COMMENT",
-    topic:
-      "Ten Mind-Blowing Reasons Why Design Is Using This Technique For Exposure.",
-    image: "https://sergio-react.vercel.app/static/img/blog-2.jpg",
-  },
-  {
-    id: "3",
-    date: "29/FEB/2022 - WEBSITE - 1 COMMENT",
-    topic: "I Will Tell You The Truth About Design In The Next 60 Seconds.",
-    image: "https://sergio-react.vercel.app/static/img/blog-3.jpg",
-  },
-  {
-    id: "4",
-    date: "29/FEB/2022 - WEBSITE - 1 COMMENT",
-    topic: "What You Know About Design And What You Don't Know About Design.",
-    image: "https://sergio-react.vercel.app/static/img/blog-4.jpg",
-  },
-];
 export default function BlogComponent() {
+  const { blogs } = portfolio;
   return (
     <>
-      <div className=" mx-auto  mb-5 grid grid-cols-1 gap-2 px-10 text-white lg:grid-cols-2 lg:gap-8 lg:pt-32 lg:px-28">
+      <div className=" mx-auto  mb-5 grid grid-cols-1 gap-2 px-6 text-white lg:grid-cols-2 lg:gap-8 lg:pt-32 md:px-18 lg:px-24 xl:px-28">
         <h3 className="font-light tracking-widest text-3xl mb-10 lg:col-span-2">
           LATEST BLOG.
         </h3>

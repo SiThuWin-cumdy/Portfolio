@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
-
+import portfolio from "@/public/data/portfolio";
 
 export default function HomeComponent() {
   const [mounted, setMounted] = useState(false);
+  const { serviceSkills, serviceSlogun } = portfolio;
 
   useEffect(() => {
     setMounted(true);
@@ -12,25 +13,22 @@ export default function HomeComponent() {
 
   return (
     <section className="min-h-screen">
-      <div className="mx-auto grid grid-cols-1 px-10 text-white lg:grid-cols-2 lg:pt-32 lg:px-24">
+      <div className="mx-auto grid grid-cols-1 px-6 text-white lg:grid-cols-2  lg:pt-28 md:px-18 lg:px-24 xl:px-28">
         <div className="py-20">
           <h3 className="text-2xl py-3">Hello, I am</h3>
           <h1 className="text-5xl font-bold py-3">Si Thu Win</h1>
           <h5 className="py-3 text-lg font-semibold overflow-hidden flex items-center">
             I Am Passionate &nbsp;
-             <Typewriter
+            <Typewriter
               options={{
-                strings: ["Web Developer", "Freelancer"],
+                strings: serviceSkills,
                 autoStart: true,
                 loop: true,
               }}
             />
           </h5>
 
-          <p className="text-justify py-5 max-w-md">
-            I design and develop services for customers of all sizes,
-            specializing in creating stylish, modern websites and web services
-          </p>
+          <p className="text-justify py-5 max-w-md">{serviceSlogun}</p>
 
           <a
             href="files/AngularDeveloper_SiThuWin.pdf"

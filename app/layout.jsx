@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import MenuComponent from "@/components/Menu";
+import Script from 'next/script';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+         <Script src="/assets/data/portfolio.js" strategy="beforeInteractive" />
           <MenuComponent />
           <div className="min-h-screen pt-16 bg-gray-100">
             <div className="bg-slate-900 w-full">{children}</div>

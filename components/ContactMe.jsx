@@ -5,9 +5,11 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import React, { useEffect, useState } from "react";
+import portfolio from "@/public/data/portfolio";
 
 export default function ContactMeComponent() {
   const [loading, setLoading] = useState(false);
+  const { email, mobileNumber } = portfolio;
 
   const {
     register,
@@ -51,7 +53,7 @@ export default function ContactMeComponent() {
 
   return (
     <>
-      <div className=" mx-auto mb-5 grid grid-cols-1 px-10 text-white lg:grid-cols-3 lg:gap-8 lg:pt-32 lg:px-28">
+      <div className=" mx-auto mb-5 grid grid-cols-1 px-6 text-white lg:grid-cols-3 lg:gap-8 lg:pt-32 md:px-18 lg:px-24 xl:px-28">
         <h3 className="font-light tracking-widest text-3xl  mb-3  col-span-3">
           GET IN TOUCH.
         </h3>
@@ -70,11 +72,11 @@ export default function ContactMeComponent() {
           </h4>
           <h4 className="font-bold text-lg flex items-center mt-3">
             <FiMail className="text-indigo-500" /> &nbsp;
-            sithuwin.cumdy@gmail.com
+            {email}
           </h4>
           <h4 className="font-bold text-lg flex items-center mt-3">
             <FaMobileAlt className="text-indigo-500" />
-            &nbsp; +971567019832
+            &nbsp; {mobileNumber}
           </h4>
         </div>
 
