@@ -13,12 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <>
-          <div className="min-h-screen flex flex-row bg-gray-100">
-            <MenuComponent />
+          <MenuComponent />
+          <div className="min-h-screen pt-16 bg-gray-100">
             <div className="bg-slate-900 w-full">{children}</div>
           </div>
-        </>
       </body>
     </html>
   );

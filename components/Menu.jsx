@@ -7,134 +7,197 @@ import { AiOutlineLaptop } from "react-icons/ai";
 import { TfiLayoutMediaOverlay } from "react-icons/tfi";
 import { TbPhoneCall } from "react-icons/tb";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import React from "react";
+
 export default function MenuComponent() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Use useEffect to handle client-side mounting
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-  return (
-    <>
-      <div
-        className={`sticky top-0 h-screen bg-white rounded-sm overflow-hidden transition-all duration-300 ease-linear ${
-          isOpen ? "w-56" : "w-12"
-        }`}
-      >
-        <div className="h-full flex flex-col overflow-y-auto overflow-x-hidden">
-          <div className="flex items-center justify-center h-32 ">
-            <RxHamburgerMenu
-              className="absolute top-0 right-0 cursor-pointer"
-              onClick={handleClick}
-            />
-            <div
-              className={`${
-                !isOpen ? "w-11 h-11" : "w-24 h-24"
-              } overflow-hidden rounded-full border-4 border-indigo-700 `}
-            >
-              <img src="images/logos/coding.png" title="" alt="" />
-            </div>
-          </div>
-          <h3
-            className={`${
-              !isOpen ? "text-lg" : "text-2xl"
-            } text-center uppercase text-indigo-700 pb-3 shadow-md`}
-          >
-            Si Thu Win
-          </h3>
-          <ul className="flex flex-col py-4">
-            <li>
-              <Link
-                to="home"
-                smooth={true}
-                duration={800}
-                className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
-              >
-                <span className="inline-flex items-center justify-center h-12 w-12 text-lg  ">
-                  <FiHome />
-                </span>
-                <span
-                  className={`text-sm font-medium ${!isOpen ? "hidden" : ""}`}
-                >
-                  HOME
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="aboutme"
-                smooth={true}
-                duration={800}
-                className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
-              >
-                <span className="inline-flex items-center justify-center h-12 w-12 text-lg  ">
-                  <BsPersonVcard />
-                </span>
-                <span
-                  className={`text-sm font-medium ${!isOpen ? "hidden" : ""}`}
-                >
-                  ABOUT ME
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="services"
-                smooth={true}
-                duration={800}
-                className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
-              >
-                <span className="inline-flex items-center justify-center h-12 w-12 text-lg ">
-                  <AiOutlineLaptop />
-                </span>
-                <span
-                  className={`text-sm font-medium ${!isOpen ? "hidden" : ""}`}
-                >
-                  SERVICES
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="blogs"
-                smooth={true}
-                duration={800}
-                className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
-              >
-                <span className="inline-flex items-center justify-center h-12 w-12 text-lg ">
-                  <TfiLayoutMediaOverlay />
-                </span>
-                <span
-                  className={`text-sm font-medium ${!isOpen ? "hidden" : ""}`}
-                >
-                  BLOGS
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contactme"
-                smooth={true}
-                duration={800}
-                className="cursor-pointer flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-700 hover:text-gray-800"
-              >
-                <span className="inline-flex items-center justify-center h-12 w-12 text-lg ">
-                  <TbPhoneCall />
-                </span>
-                <span
-                  className={`text-sm font-medium ${!isOpen ? "hidden" : ""}`}
-                >
-                  CONTACT ME
-                </span>
-              </Link>
-            </li>
-          </ul>
 
-          <div className="flex items-end flex-grow w-full justify-center py-3">
-            <FooterComponent isOpen={isOpen} />
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return null;
+  }
+
+  return (
+    <nav className="fixed top-0 w-full bg-white shadow-md z-50">
+      <div className="max-w-full mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          <div
+            className="flex items-center cursor-pointer"
+            role="button"
+            tabIndex={0}
+            aria-label="Scroll to top"
+            onClick={() => scroll.scrollToTop({ duration: 800 })}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                scroll.scrollToTop({ duration: 800 });
+              }
+            }}
+          >
+            <div className="w-10 h-10 overflow-hidden rounded-full border-2 border-indigo-700">
+              <img src="images/logos/coding.png" title="" alt="" className="w-full h-full object-cover" />
+            </div>
+            <h3 className="ml-3 text-xl uppercase text-indigo-700">
+              Si Thu Win
+            </h3>
+          </div>
+          
+          {/* Desktop menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link
+              to="home"
+              smooth={true}
+              duration={800}
+              spy={true}
+              activeClass="text-indigo-700 font-semibold"
+              className="flex items-center px-3 py-2 text-gray-700 hover:text-indigo-700 cursor-pointer transition-colors duration-200"
+            >
+              <FiHome className="mr-2" />
+              <span className="text-sm font-medium">HOME</span>
+            </Link>
+            <Link
+              to="aboutme"
+              smooth={true}
+              duration={800}
+              spy={true}
+              activeClass="text-indigo-700 font-semibold"
+              className="flex items-center px-3 py-2 text-gray-700 hover:text-indigo-700 cursor-pointer transition-colors duration-200"
+            >
+              <BsPersonVcard className="mr-2" />
+              <span className="text-sm font-medium">ABOUT ME</span>
+            </Link>
+            <Link
+              to="services"
+              smooth={true}
+              duration={800}
+              spy={true}
+              activeClass="text-indigo-700 font-semibold"
+              className="flex items-center px-3 py-2 text-gray-700 hover:text-indigo-700 cursor-pointer transition-colors duration-200"
+            >
+              <AiOutlineLaptop className="mr-2" />
+              <span className="text-sm font-medium">SERVICES</span>
+            </Link>
+            <Link
+              to="blogs"
+              smooth={true}
+              duration={800}
+              spy={true}
+              activeClass="text-indigo-700 font-semibold"
+              className="flex items-center px-3 py-2 text-gray-700 hover:text-indigo-700 cursor-pointer transition-colors duration-200"
+            >
+              <TfiLayoutMediaOverlay className="mr-2" />
+              <span className="text-sm font-medium">BLOGS</span>
+            </Link>
+            <Link
+              to="contactme"
+              smooth={true}
+              duration={800}
+              spy={true}
+              activeClass="text-indigo-700 font-semibold"
+              className="flex items-center px-3 py-2 text-gray-700 hover:text-indigo-700 cursor-pointer transition-colors duration-200"
+            >
+              <TbPhoneCall className="mr-2" />
+              <span className="text-sm font-medium">CONTACT ME</span>
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={handleClick}
+              className="text-gray-700 hover:text-gray-900"
+            >
+              <RxHamburgerMenu className="h-6 w-6" />
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile menu dropdown */}
+        <div className={`${isOpen ? 'block' : 'hidden'} md:hidden absolute top-16 left-0 right-0 bg-white shadow-md`}>
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            <Link
+              to="home"
+              smooth={true}
+              duration={800}
+              spy={true}
+              activeClass="text-indigo-700 bg-gray-50 font-semibold"
+              className="block px-3 py-2 text-gray-700 hover:text-indigo-700 hover:bg-gray-50 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
+            >
+              <div className="flex items-center">
+                <FiHome className="mr-2" />
+                <span className="text-sm font-medium">HOME</span>
+              </div>
+            </Link>
+            <Link
+              to="aboutme"
+              smooth={true}
+              duration={800}
+              spy={true}
+              activeClass="text-indigo-700 bg-gray-50 font-semibold"
+              className="block px-3 py-2 text-gray-700 hover:text-indigo-700 hover:bg-gray-50 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
+            >
+              <div className="flex items-center">
+                <BsPersonVcard className="mr-2" />
+                <span className="text-sm font-medium">ABOUT ME</span>
+              </div>
+            </Link>
+            <Link
+              to="services"
+              smooth={true}
+              duration={800}
+              spy={true}
+              activeClass="text-indigo-700 bg-gray-50 font-semibold"
+              className="block px-3 py-2 text-gray-700 hover:text-indigo-700 hover:bg-gray-50 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
+            >
+              <div className="flex items-center">
+                <AiOutlineLaptop className="mr-2" />
+                <span className="text-sm font-medium">SERVICES</span>
+              </div>
+            </Link>
+            <Link
+              to="blogs"
+              smooth={true}
+              duration={800}
+              spy={true}
+              activeClass="text-indigo-700 bg-gray-50 font-semibold"
+              className="block px-3 py-2 text-gray-700 hover:text-indigo-700 hover:bg-gray-50 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
+            >
+              <div className="flex items-center">
+                <TfiLayoutMediaOverlay className="mr-2" />
+                <span className="text-sm font-medium">BLOGS</span>
+              </div>
+            </Link>
+            <Link
+              to="contactme"
+              smooth={true}
+              duration={800}
+              spy={true}
+              activeClass="text-indigo-700 bg-gray-50 font-semibold"
+              className="block px-3 py-2 text-gray-700 hover:text-indigo-700 hover:bg-gray-50 transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
+            >
+              <div className="flex items-center">
+                <TbPhoneCall className="mr-2" />
+                <span className="text-sm font-medium">CONTACT ME</span>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
-    </>
+    </nav>
   );
 }
