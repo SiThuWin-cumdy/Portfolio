@@ -44,8 +44,8 @@ export default function HomeComponent() {
           <img
             className="rounded-xl"
             src="images/logos/home-profile.jpg"
-            title=""
-            alt=""
+            title="Si Thu Win profile photograph"
+            alt="Profile photo of Si Thu Win — Software Developer"
           />
         </div>
       </div>

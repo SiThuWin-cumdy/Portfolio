@@ -45,7 +45,7 @@ export default function MenuComponent() {
             }}
           >
             <div className="w-10 h-10 overflow-hidden rounded-full border-2 border-indigo-700">
-              <img src="images/logos/coding.png" title="" alt="" className="w-full h-full object-cover" />
+              <img src="images/logos/coding.png" title="Si Thu Win logo" alt="Logo for Si Thu Win — Software Developer" className="w-full h-full object-cover" />
             </div>
             <h3 className="ml-3 text-xl uppercase text-indigo-700">
               Si Thu Win

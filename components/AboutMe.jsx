@@ -19,8 +19,8 @@ export default function AboutMeComponent() {
           <img
             className="rounded-xl"
             src="images/logos/about-me.jpg"
-            title=""
-            alt=""
+            title="About Si Thu Win"
+            alt="About section image for Si Thu Win — Software Developer"
           />
         </div>
         <div className="">
